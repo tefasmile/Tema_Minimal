@@ -1,0 +1,14 @@
+<nav class="navigation left">
+  <ul class="links">
+    <li class="links item">
+      <a href="{{@blog.url}}/#open" class="link-item" title="{{@blog.title}} blog" id="blog-button">Blog</a>
+	    <a href="{{@blog.url}}/about" class="link-item" title="Sobre mi" id="blog-button">About</a>
+      <a href="{{@blog.url}}/contact" class="link-item" title="Contáctame" id="blog-button">Contact</a>
+      <a href="{{@blog.url}}/suscribete" class="link-item" title="Suscribete al blog" id="blog-button">Suscríbete</a>
+      
+     {{#foreach @blog.navigation}}
+        {{!--<a href="{{@blog.url}}/" class="link-item" id="{{slug}}-button">{{label}}</a>--}}
+      {{/foreach}}
+    </li>
+  </ul>
+</nav>

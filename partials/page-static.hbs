@@ -1,0 +1,45 @@
+{{#post}}
+
+  {{> meta}}
+
+  <link rel="stylesheet" type="text/css" href="{{asset "css/uno.css"}}" />
+
+  {{ghost_head}}
+
+  <body class="{{body_class}}">
+
+    <article class="{{post_class}}">
+      <header>
+        <h1 id="post-title">{{title}}</h1>
+      </header>
+
+      <section class="{{post_class}}">
+        {{content}}
+      </section>
+
+    </article>
+
+
+    <section id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </section>
+
+    {{> aside}}
+
+    <main>
+      <section id="search-results"></section>
+      <section class="content">
+        {{{body}}}
+        {{> footer}}
+      </section>
+    </main>
+
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/uno.js"}}"></script>
+    {{> botones_social}}
+    {{> google-analytics}}
+  </body>
+
+  
+
+{{/post}}

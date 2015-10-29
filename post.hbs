@@ -1,0 +1,65 @@
+{{!< default}}
+
+{{#post}}
+
+  <article class="{{post_class}}">
+    <header>
+      <div class="post meta">
+        <time datetime="{{date format="DD MMM YYYY"}}">{{date format="DD MMM YYYY"}}</time>
+        
+        <span class="post tags">{{tags prefix="in " separator=" "}}</span>
+
+        {{!--<span class="post author">
+          <img src="{{author.image}}" class="rounded" alt="profile image for {{author.name}}"/> by {{author.name}}
+        </span>--}}
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+
+      <a alt="Tweet '{{title}}'" href="https://twitter.com/intent/tweet?text={{encode title}} {{encode ' » '}}&amp;url={{url absolute="true"}}" >
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">{{{title}}}</h1>
+        {{!button likes}}
+        <div class="redes-sociales">
+            <div class="face">
+                <div id="fb-root"></div>
+                <div class="fb-share-button" data-href="https://www.facebook.com/stefanyzapata92" data-layout="button_count"></div>
+            </div>
+            <div class="tw">
+                {{!twitter}}
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://stefanyzapata.com" data-via="tefalife">Tweet</a>
+            </div>
+            <div class="li">
+                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script type="IN/Share" data-url="stefanyzapata.com" data-counter="right"></script>
+            </div>
+            <div class="go">
+                {{!google}}
+                <div class="g-plus" data-action="share"></div>
+            </div>
+        </div>
+        {{!image}}
+        {{#if image}}<img id="post-image" src={{image}} alt="{{{title}}}">{{/if}}
+      </a>
+    </header>
+
+    <div id="post-content" class="{{post_class}}">
+      {{content}}
+    </div>
+
+    <div class="post related">
+      {{#prev_post}}
+        <a rel="prev" id="prev-btn" class="btn small square" href="{{url}}">← {{title}}</a>
+      {{/prev_post}}
+
+      {{#next_post}}
+        <a rel="next" id="next-btn" class="btn small square" href="{{url}}">{{title}} →</a>
+      {{/next_post}}
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    {{> comments}}
+    {{> google-analytics}}
+
+  </article>
+
+{{/post}}

@@ -1,0 +1,19 @@
+{{!button likes}}
+<div class="redes-sociales">
+    <div class="face">
+        <div id="fb-root"></div>
+        <div class="fb-share-button" data-href="https://www.facebook.com/stefanyzapata92" data-layout="button_count"></div>
+    </div>
+    <div class="tw">
+        {{!twitter}}
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://stefanyzapata.com" data-via="tefalife">Tweet</a>
+    </div>
+    <div class="li">
+        <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+        <script type="IN/Share" data-url="stefanyzapata.com" data-counter="right"></script>
+    </div>
+    <div class="go">
+        {{!google}}
+        <div class="g-plus" data-action="share"></div>
+    </div>
+</div>
